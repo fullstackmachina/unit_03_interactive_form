@@ -24,7 +24,10 @@ window.addEventListener("load", () => {
   designField.value = "";
   colorField.disabled = true;
   colorField.value = "";
+
   payment.value = "credit-card";
+  hideAllPayments();
+  creditCard.style.display = "block";
 });
 
 // job role field validation
@@ -65,7 +68,6 @@ activitiesSection.addEventListener("change", (e) => {
 // add a focus and blur on activities checkbox
 activities.forEach((activitie) => {
   activitie.addEventListener("focus", () => {
-    activitie.classList.add("focus");
     activitie.parentNode.classList.add("focus");
   });
 
@@ -96,11 +98,15 @@ function hideAllPayments() {
 
 // form validation
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  isNameValid();
-  isValidEmail();
-  isActivity();
-  isCreditCardValid();
+  const nameOk = isNameValid();
+  const emailOk = isValidEmail();
+  const activitiesOk = isActivity();
+
+  const ccOk = payment.value === "credit-card" ? isCreditCardValid() : true;
+
+  if (!nameOk || !emailOk || !activitiesOk || !ccOk) {
+    e.preventDefault();
+  }
 });
 
 function showValidation(input) {
