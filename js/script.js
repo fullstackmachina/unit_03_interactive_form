@@ -40,14 +40,28 @@ jobRoleField.addEventListener("change", () => {
 });
 
 // color field validation
+
+
 designField.addEventListener("change", () => {
   const selectedDesign = designField.value;
-
   colorField.disabled = selectedDesign === "";
 
   dataThemes.forEach((theme) => {
     theme.hidden = theme.dataset.theme !== selectedDesign;
   });
+
+
+  if (selectedDesign !== "") {
+    const firstMatch = colorField.querySelector(
+      `option[data-theme="${selectedDesign}"]`
+    );
+    if (firstMatch) {
+      colorField.value = firstMatch.value;
+    }
+  } else {
+   
+    colorField.value = "";
+  }
 });
 
 // activites total
