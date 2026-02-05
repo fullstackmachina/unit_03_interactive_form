@@ -445,6 +445,7 @@ button:hover {
 
 .paypal,
 .bitcoin {
+  display: none;
   margin: 20px auto 10px auto;
   padding: 0 15px;
   background: rgb(255, 253, 249);

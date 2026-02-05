@@ -19,7 +19,7 @@
       </div>
     </header>
     <div class="container">
-      <form action="index.html" method="post" novalidate>
+      <form action="index.html" method="post" novalidate autocomplete="off">
         <p id="form-hint" class="form-hint">
           <span class="asterisk">*</span> - required field
         </p>
@@ -56,7 +56,7 @@
 
             <label for="title">Job Role</label>
             <select id="title" name="user-title">
-              <option selected hidden>Select Job Role</option>
+              <option value="" selected hidden>Select Job Role</option>
               <option value="full-stack js developer">
                 Full Stack JavaScript Developer
               </option>
@@ -93,7 +93,7 @@
               <div id="shirt-designs" class="shirt-designs">
                 <label for="design">Design:</label>
                 <select id="design" name="user-design">
-                  <option hidden>Select Theme</option>
+                  <option value="" selected hidden>Select Theme</option>
                   <option value="js puns">Theme - JS Puns</option>
                   <option value="heart js">Theme - I &#9829; JS</option>
                 </select>
@@ -101,8 +101,10 @@
 
               <div id="shirt-colors" class="shirt-colors">
                 <label for="color">Color:</label>
-                <select id="color">
-                  <option selected hidden>Select a design theme above</option>
+                <select id="color" disabled>
+                  <option value="" selected disabled hidden>
+                    Select a design theme above
+                  </option>
                   <option data-theme="js puns" value="cornflowerblue">
                     Cornflower Blue (JS Puns shirt only)
                   </option>
@@ -234,7 +236,7 @@
               <option value="select method" hidden>
                 Select Payment Method
               </option>
-              <option value="credit-card">Credit Card</option>
+              <option value="credit-card" selected>Credit Card</option>
               <option value="paypal">PayPal</option>
               <option value="bitcoin">Bitcoin</option>
             </select>
