@@ -62,7 +62,7 @@ activitiesSection.addEventListener("change", (e) => {
     totalCost -= cost;
   }
 
-  pricing.textContent = `Total: ${totalCost} $`;
+  pricing.textContent = `Total: $ ${totalCost} `;
 });
 
 // add a focus and blur on activities checkbox
