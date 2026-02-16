@@ -5,7 +5,7 @@ Treehouse Full Stack JavaScript Techdegree – Unit 03
 This project focuses on building an accessible and interactive registration form using vanilla JavaScript.
 It covers real-world form behaviors such as conditional fields, dynamic UI updates, custom validation, and clear visual feedback without relying on built-in HTML5 validation.
 
-🔗 Live : https://fullstackmachina.github.io/unit_03_interactive_form/
+🔗 Live : https://fullstackmachina.github.io/unit03_interactive_form/
 
 📸 Preview image
 ![alt text](preview_project3.png)
